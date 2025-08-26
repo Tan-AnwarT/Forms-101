@@ -1,0 +1,182 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+  <title>Form Layout Copy</title>  
+  <style>  
+    body {  
+      font-family: Arial, sans-serif;  
+      margin: 0;  
+      padding: 0;  
+      background-color: #f0f4f8; /* soft light blue-gray background */  
+    }  
+
+    .container {  
+      position: relative;  
+      width: 100%;  
+      height: 100vh;  
+    }  
+
+    .picture-box {  
+      position: absolute;  
+      top: 50px;  
+      left: 300px;  
+    }  
+
+    .picture-box img {  
+      width: 250px;  
+      height: 150px;  
+      border: 2px solid #333;  
+      border-radius: 8px;  
+    }  
+
+    .form-left {  
+      position: absolute;  
+      top: 250px;  
+      left: 300px;  
+    }  
+
+    .form-left label {  
+      display: inline-block;  
+      width: 100px;  
+      font-weight: bold;  
+      margin-bottom: 30px;  
+    }  
+
+    .form-left input[type="text"] {  
+      width: 300px;  
+      padding: 5px;  
+      margin-bottom: 10px;  
+      border: 2px solid #ccc;  
+      border-radius: 5px;  
+    }  
+
+    .text-block {  
+      position: absolute;  
+      top: 50px;  
+      left: 600px;  
+      width: 500px;  
+      color: #333;  
+    }  
+
+    .form-right {  
+      position: absolute;  
+      top: 250px;  
+      left: 800px;  
+    }  
+
+    .form-right label {  
+      display: block;  
+      margin-top: 10px;  
+      font-weight: bold;  
+    }  
+
+    .form-right input[type="radio"],  
+    .form-right input[type="checkbox"] {  
+      margin-right: 5px;  
+      transform: scale(1.2);  
+    }  
+
+    .form-right .hobbies {  
+      margin-top: 30px;  
+    }  
+
+    .form-right span {  
+      font-weight: bold;  
+    }  
+
+    .contact-container {  
+      position: absolute;  
+      top: 420px;  
+      left: 300px;  
+    }  
+
+    .contact-container label {  
+      display: inline-block;  
+      width: 140px;  
+      font-weight: bold;  
+    }  
+
+    .short-input {  
+      width: 260px;  
+      padding: 5px;  
+      border: 2px solid #ccc;  
+      border-radius: 5px;  
+    }
+
+    .submit-btn {
+      position: absolute;
+      top: 520px;
+      left: 300px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit-btn:hover {
+      background: #45a049;
+    }
+  </style>  
+</head>  
+<body>  
+  <div class="container">  
+
+    <!-- Picture -->  
+    <div class="picture-box">  
+      <img src="https://media.licdn.com/dms/image/v2/D4E12AQHVEOrMe0fYWQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1715617723011?e=2147483647&v=beta&t=0mMr3UfxgulEhyYdQSFjcWFpTNvFl9QqRW1KljE_CUk" alt="Profile Picture">  
+    </div>  
+
+    <!-- Paragraph -->  
+    <div class="text-block">  
+      <p>
+        Ready to join a community that supports both your fitness journey and mental well-being?  
+        Just fill out the form below and take the first step!
+      </p>  
+    </div>  
+
+    <!-- The actual form (FIXED & COMPLETE) -->  
+    <form action="#" method="post">  
+      <!-- Name, Address, Email-Ad -->  
+      <div class="form-left">  
+        <label for="name">Name:</label>  
+        <input type="text" id="name" name="name"><br>  
+
+        <label for="address">Address:</label>  
+        <input type="text" id="address" name="address"><br>  
+
+        <label for="email">Email-Ad:</label>  
+        <input type="email" id="email" name="email"><br>  
+      </div>  
+
+      <!-- Contact Number -->  
+      <div class="contact-container">  
+        <label for="contact">Contact Number:</label>  
+        <input type="tel" id="contact" name="contact" class="short-input">  
+      </div>  
+
+      <!-- Gender and Hobbies -->  
+      <div class="form-right">  
+        <label><span>Gender:</span></label>  
+        <input type="radio" id="male" name="gender" value="male"> <span>Male</span><br>  
+        <input type="radio" id="female" name="gender" value="female"> <span>Female</span>  
+
+        <div class="hobbies">  
+          <label><span>Hobbies:</span></label>  
+          <input type="checkbox" id="swimming" name="hobbies" value="Swimming"> <span>Swimming</span><br>  
+          <input type="checkbox" id="biking" name="hobbies" value="Biking"> <span>Biking</span><br>  
+          <input type="checkbox" id="reading" name="hobbies" value="Reading"> <span>Reading</span><br>  
+          <input type="checkbox" id="watching" name="hobbies" value="Watching TV"> <span>Watching TV</span><br>  
+          <input type="checkbox" id="playing" name="hobbies" value="Playing"> <span>Playing</span>  
+        </div>  
+      </div>  
+
+      <!-- Submit Button -->  
+      <button type="submit" class="submit-btn">Submit</button>  
+    </form>  
+
+  </div>  
+</body>  
+</html>
